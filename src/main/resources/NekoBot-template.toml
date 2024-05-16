@@ -1,0 +1,105 @@
+token = "" # Put your bot token here
+
+
+# Configuration pattern for the commands
+
+# [(command_name).(subcommand_name)]
+# name = (string)    - Display Name
+# active = (boolean) - Determines whether it will be included in the list of commands to use
+
+
+# Player settings block
+[player]
+name = "player"
+active = true
+
+[player.add]
+name = "add"
+active = true
+
+[player.loop]
+name = "loop"
+active = true
+
+[player.pause]
+name = "pause"
+active = true
+
+[player.queue]
+name = "queue"
+active = true
+
+[player.resume]
+name = "resume"
+active = true
+
+[player.shuffel]
+name = "shuffel"
+active = true
+
+[player.skip]
+name = "skip"
+active = true
+
+[player.volume]
+name = "volume"
+active = true
+
+[player.track-info]
+name = "track-info"
+active = true
+
+
+# Playlist settings block
+[playlist]
+name = "track-list"
+active = true
+
+[playlist.add]
+name = "add"
+active = true
+
+[playlist.delete]
+name = "delete"
+active = true
+
+[playlist.edit]
+name = "edit"
+active = true
+
+[playlist.get]
+name = "get"
+active = true
+
+[playlist.play]
+name = "play"
+active = true
+
+
+# Chat-GPT settings block
+[chat-gpt]
+GPTKeyAPI = "" # Put your GPT token here
+name = "chat-gpt"
+active = true
+subcommands = { } # Ignore it, but don't delete it
+
+
+# Configuration pattern for the keys-response
+
+# [[keys-response]]
+# guilds = [ (string), (string), ... ] - The list of guilds id in which the keys-response rule will apply
+# keys = [ (string), (string), ... ]   - List of keys for search
+# response = (string)                  - Responce on found keys
+# reaction = (boolean)                 - Whether a reply will be sent as a reaction to the message
+# active = (boolean)                   - Determines whether it will be included in the list of commands to use
+
+# Note
+# The keys found are not affected by case, as well as the presence of characters near them
+
+# Example
+[[keys-response]]
+guilds = [ "000000000000000000", "000000000000000001" ]
+keywords = [ "ping", "p1ng" ]
+response = "pong"
+reaction = false
+active = true
