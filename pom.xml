@@ -15,6 +15,7 @@
     </properties>
 
     <dependencies>
+        <!-- JDA -->
         <dependency>
             <groupId>com.github.DV8FromTheWorld</groupId>
             <artifactId>JDA</artifactId>
@@ -26,30 +27,41 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- lavaplayer -->
         <dependency>
             <groupId>dev.arbjerg</groupId>
             <artifactId>lavaplayer</artifactId>
             <version>2.1.1</version>
         </dependency>
+        <!-- json -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20220924</version>
+            <version>20231013</version>
         </dependency>
+        <!-- json-simple -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <!-- logback-classic -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.8</version>
+            <version>1.4.12</version>
         </dependency>
+        <!-- selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.13.0</version>
+        </dependency>
+        <!-- toml4j -->
+        <dependency>
+            <groupId>com.moandjiezana.toml</groupId>
+            <artifactId>toml4j</artifactId>
+            <version>0.7.2</version>
         </dependency>
     </dependencies>
 
