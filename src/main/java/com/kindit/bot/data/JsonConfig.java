@@ -13,7 +13,7 @@ import java.util.*;
 public class JsonConfig {
     public final String TOKEN;
     public final String GPT_KEY_API;
-    public final UserKeywords[] USER_KEYWORDS;
+    public final KeysResponce[] USER_KEYWORDS;
     private final String configName = "NekoBot";
     private final JSONObject config;
     private static JsonConfig instance;
@@ -128,7 +128,7 @@ public class JsonConfig {
         file.close();
     }
 
-    private JSONObject getConfig()  {
+    private JSONObject getConfig() {
         JSONObject object = null;
         try {
             JSONParser parser = new JSONParser();
@@ -143,8 +143,8 @@ public class JsonConfig {
         return object;
     }
 
-    private UserKeywords[] getUserKeywords() {
-        List<UserKeywords> userKeywordsDTOList = new ArrayList<>();
+    private KeysResponce[] getUserKeywords() {
+        List<KeysResponce> keysResponceDTOList = new ArrayList<>();
         JSONObject userSettings = (JSONObject) config.get("user-settings");
         JSONArray keywordsJSONObjects = (JSONArray) userSettings.get("keywords-response");
 
@@ -160,8 +160,8 @@ public class JsonConfig {
             for (Object o : (JSONArray) jsonObject.get("keywords")) keywords.add(o.toString());
 
 
-            userKeywordsDTOList.add(
-                    new UserKeywords(
+            keysResponceDTOList.add(
+                    new KeysResponce(
                             guildId.toArray(new Long[0]),
                             keywords.toArray(new String[0]),
                             jsonObject.get("response").toString()
@@ -169,7 +169,7 @@ public class JsonConfig {
             );
         }
 
-        return userKeywordsDTOList.toArray(new UserKeywords[0]);
+        return keysResponceDTOList.toArray(new KeysResponce[0]);
     }
 
     public JSONObject getCommand(String name) {
